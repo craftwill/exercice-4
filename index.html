@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>02-Navigation Pur CSS par la gauche</title>
+		<!-- Ajustement de la taille du viewport-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<input type="checkbox" id="chkBoutonBurger" />
+		<label for="chkBoutonBurger" class="boutonBurger"></label>
+		<div class="global">
+			<nav class="menu">
+				<a href="#">BOUTON 1</a>
+				<a href="#">BOUTON 2</a>
+				<a href="#">BOUTON 3</a>
+				<a href="#">BOUTON 4</a>
+			</nav>
+			<!-- /MENU -->
+			<main class="contenu">
+				<section>
+					<article>
+						<h2>Navigation basée sur :</h2>
+						<ul>
+							<li>Flexbox pour la disposition</li>
+							<li>CSS pour les styles et les transitions</li>
+						</ul>
+						<h2>Le principe général est celui-ci :</h2>
+						<ul>
+							<li>
+								Le &lt;body&gt; est affiché en colonne et comporte deux enfants principaux: le <strong>bouton burger</strong> (balises &lt;input&gt; et &lt;label&gt;) et le <strong>contenu global</strong> (balise &lt;div class="global"&gt;).
+							</li>
+							<li>
+								La balise &lt;div class="global"&gt; est le flex-container principal et ses deux enfants directs sont les deux parties principales du gabarit, à savoir le <strong>menu</strong> (balise &lt;nav&gt;) et le <strong>contenu</strong> (balise &lt;main&gt;).
+							</li>
+							<li>
+								Sur petit écran (767px et moins), le contenu de &lt;div class="global"&gt; est affiché en rangée. La barre de menu et le contenu ont une largeur de 100%. La barre de menu est déplacée à gauche avec une translation de -100% sur le conteneur parent: &lt;div class="global"&gt;. Quand on clique sur le bouton "burger" on place le conteneur parent à son emplacement initial (translateX(0%)).
+							</li>
+							<li></li>
+								Sur un écran de taille moyenne (min-width: 768px), le contenu de la balise &lt;div class="global"&gt; est affichée en colonne et la barre de menu est alors automatiquement placée en haut de "main".
+							</li>
+							<li>PRÉ-REQUIS CSS/HTML : case à cocher invisible </li>
+						</ul>
+					</article>
+				</section>
+				<footer>Navigation Responsive avec CSS - Sur les petits écrans le menu arrive par la gauche...</footer>
+			</main>
+			<!-- /CONTENU -->
+		</div>
+		<!-- /GLOBAL -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
